@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body bgcolor="cyan">
+<!-- templates/home.html -->
+<ul>
+  {% for post in object_list %}
+    <img src="{{ post.foodimage.url}}">
+  {% endfor %}
+</ul>
+</body>
+
+</html>

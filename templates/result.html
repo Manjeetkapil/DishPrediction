@@ -1,0 +1,8 @@
+<h2> results </h2>
+
+{% for i in result%}
+<h2> {{i.confidence}}=={{i.tag.en}} </h2>
+{%endfor%}
+
+
+<a href="{%url 'add_post'%}">Get another receipe</a>
