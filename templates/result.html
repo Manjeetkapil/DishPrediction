@@ -1,8 +1,20 @@
-<h2> results </h2>
+<h1> results </h1>
 
+<div style="color: aqua; padding-left: 100px; width: fit-content; text-align: center;">
 {% for i in result%}
-<h2> {{i.confidence}}=={{i.tag.en}} </h2>
+<h2> {{i.recipe.label}}:{{i.recipe.vegan}} </h2>
+    {% for j in i.recipe.ingredients%}
+    <h3>Food: {{j.foodId}}</h3>
+    <h3>quantity : {{j.quantity}}</h3>
+    <h3>measure : {{j.measure}}</h3>
+    <h3>weight : {{j.weight}}</h3>
+    <h3>food: {{j.food}}</h3>
+    <h3>foodcategory : {{foodCategory}}</h3>
+    <br>
+    {%endfor%}
+<img src={{i.recipe.image}} alt="">
 {%endfor%}
+</div>
 
 
 <a href="{%url 'add_post'%}">Get another receipe</a>
